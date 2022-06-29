@@ -41,11 +41,12 @@ struct GIFURLImageView: View {
                     .background(.gray)
                     .onAppear{
                         urlImageviewModel.fetch()
-                        if let id = urlImageviewModel.id {
-                            isFavSelected = DefaultsHelper.isFavoriteFor(id)
-                        }
                     }
                 
+            }
+        }.onAppear{
+            if let id = urlImageviewModel.id {
+                isFavSelected = DefaultsHelper.isFavoriteFor(id)
             }
         }
     }
