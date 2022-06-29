@@ -24,7 +24,7 @@ struct GridEvenRow: View {
                 if  ind < fav.count, let gid = fav[ind] {
                     VStack {
                         Text(gid.id ?? "")
-                        GIFURLImage(urlImageviewModel: URLImageViewModel(id: gid.id, url: gid.url))
+                        GIFURLImageView(urlImageviewModel: URLImageViewModel(id: gid.id, url: gid.url))
                             .frame(width: viewModel.itemWidthForCol(col, row: row), height: 150)
                     }
                 }

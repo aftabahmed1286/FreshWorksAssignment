@@ -26,6 +26,8 @@
 		3EEE8D03286C0509009B367F /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D02286C0509009B367F /* DefaultsHelper.swift */; };
 		3EEE8D06286C0560009B367F /* GIFSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D05286C0560009B367F /* GIFSearch.swift */; };
 		3EEE8D0A286C4CBC009B367F /* GridEvenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */; };
+		3EEE8D26286C937F009B367F /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D25286C937F009B367F /* GIFImage.swift */; };
+		3EEE8D28286C93C0009B367F /* GIFImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D27286C93C0009B367F /* GIFImageLoader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +51,8 @@
 		3EEE8D02286C0509009B367F /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
 		3EEE8D05286C0560009B367F /* GIFSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFSearch.swift; sourceTree = "<group>"; };
 		3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridEvenRow.swift; sourceTree = "<group>"; };
+		3EEE8D25286C937F009B367F /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
+		3EEE8D27286C93C0009B367F /* GIFImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +126,7 @@
 		3E4E4A6428697A5000A301A9 /* CommonViews */ = {
 			isa = PBXGroup;
 			children = (
-				3EEE8CFA286BEBC9009B367F /* URLImage */,
+				3EEE8CFA286BEBC9009B367F /* GIFImage */,
 				3EEE8CFF286BFA2E009B367F /* GIFList */,
 			);
 			path = CommonViews;
@@ -157,13 +161,15 @@
 			path = GIFFavView;
 			sourceTree = "<group>";
 		};
-		3EEE8CFA286BEBC9009B367F /* URLImage */ = {
+		3EEE8CFA286BEBC9009B367F /* GIFImage */ = {
 			isa = PBXGroup;
 			children = (
+				3EEE8D25286C937F009B367F /* GIFImage.swift */,
+				3EEE8D27286C93C0009B367F /* GIFImageLoader.swift */,
 				3EDD7A56286AC23B00C4F395 /* GIFURLImage.swift */,
 				3EDD7A54286AC20C00C4F395 /* URLImageViewModel.swift */,
 			);
-			path = URLImage;
+			path = GIFImage;
 			sourceTree = "<group>";
 		};
 		3EEE8CFC286BEC06009B367F /* TabViews */ = {
@@ -273,6 +279,7 @@
 				3E41A7FC286605570076E4A1 /* ContentView.swift in Sources */,
 				3E33644B286753130075B20F /* GIFFavView.swift in Sources */,
 				3EEE8D01286BFA96009B367F /* GridOddRow.swift in Sources */,
+				3EEE8D28286C93C0009B367F /* GIFImageLoader.swift in Sources */,
 				3E4E4A6C2869F23000A301A9 /* ImageLoader.swift in Sources */,
 				3E4E4A5F2869799400A301A9 /* GIFFetcher.swift in Sources */,
 				3EEE8D03286C0509009B367F /* DefaultsHelper.swift in Sources */,
@@ -282,6 +289,7 @@
 				3EDD7A57286AC23B00C4F395 /* GIFURLImage.swift in Sources */,
 				3EEE8CFE286BFA01009B367F /* GIFList.swift in Sources */,
 				3E336449286752F40075B20F /* GIFView.swift in Sources */,
+				3EEE8D26286C937F009B367F /* GIFImage.swift in Sources */,
 				3E336447286752A60075B20F /* URLBuilder.swift in Sources */,
 				3E41A7FA286605570076E4A1 /* FreshWorksApp.swift in Sources */,
 				3E4E4A61286979B900A301A9 /* GIFModel.swift in Sources */,

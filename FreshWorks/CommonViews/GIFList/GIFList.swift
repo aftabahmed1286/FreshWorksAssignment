@@ -17,7 +17,7 @@ struct GIFList: View {
                 ZStack {
                     VStack{
                         Text(gid.id ?? "")
-                        GIFURLImage(urlImageviewModel: URLImageViewModel(id: gid.id, url: gid.url))
+                        GIFURLImageView(urlImageviewModel: URLImageViewModel(id: gid.id, url: gid.url))
                             .frame(height: 200)
                         
                     }
