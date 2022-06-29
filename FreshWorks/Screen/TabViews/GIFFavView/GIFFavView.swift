@@ -14,14 +14,12 @@ struct GIFFavGrid: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
-                let fav = viewModel.favGifImageData
                 ForEach(0..<viewModel.numberOfRowsForFavoriteGrid(), id: \.self) { row in
                     if row % 2 == 0 {
-                        GridEvenRow(row: row, fav: fav)
+                        GridEvenRow(row: row)
                     } else {
-                        GridOddRow(row: row, fav: fav)
+                        GridOddRow(row: row)
                     }
-                    
                 }
             }
         }
