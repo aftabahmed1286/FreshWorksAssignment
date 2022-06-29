@@ -16,10 +16,8 @@ struct GIFList: View {
             ForEach(gifImageData, id: \.self) { gid in
                 ZStack {
                     VStack{
-                        Text(gid.id ?? "")
                         GIFURLImageView(urlImageviewModel: URLImageViewModel(id: gid.id, url: gid.url))
                             .frame(height: 200)
-                        
                     }
                     
                 }.listRowSeparator(.hidden)
