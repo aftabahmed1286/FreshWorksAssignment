@@ -8,8 +8,6 @@
 import UIKit
 import SwiftUI
 
-
-
 struct GIFView: View {
     
     @EnvironmentObject var viewModel: GIFViewModel

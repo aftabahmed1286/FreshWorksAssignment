@@ -54,7 +54,6 @@ actor ImageLoader {
         //Fetch image over network
         let task: Task<Data, Error> = Task {
             let (imageData, _) = try await URLSession.shared.data(for: urlRequest)
-//            let image = UIImage(data: imageData)!
             try self.persistImage(imageData, for: id)
             return imageData
         }
@@ -68,13 +67,11 @@ actor ImageLoader {
     
     private func persistImage(_ data: Data, for id: String) throws {
         guard let url = fileName(for: id)
-                //,
-              //let data = image.jpegData(compressionQuality: 0.8)
         else {
             assertionFailure("Unable to generate a local path for \(id)")
             return
         }
-
+        
         try data.write(to: url)
     }
 
@@ -85,7 +82,7 @@ actor ImageLoader {
         }
         print("\(id) - \(url)")
         if let data = try? Data(contentsOf: url) {
-            return data//UIImage(data: data)
+            return data
         } else {
             return nil
         }
