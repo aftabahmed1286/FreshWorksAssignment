@@ -18,6 +18,7 @@ struct GridEvenRow: View {
         HStack(spacing: 20) {
             let fav = viewModel.favGifImageData
             let index = row/2 * 5
+            
             ForEach(0..<columnsEven, id: \.self) { col in
                 let ind = index + col
                 if  ind < fav.count, let gid = fav[ind] {

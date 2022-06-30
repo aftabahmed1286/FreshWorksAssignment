@@ -18,6 +18,7 @@
 		3E4E4A5F2869799400A301A9 /* GIFFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E4A5E2869799400A301A9 /* GIFFetcher.swift */; };
 		3E4E4A61286979B900A301A9 /* GIFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E4A60286979B900A301A9 /* GIFModel.swift */; };
 		3E4E4A6C2869F23000A301A9 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E4A6B2869F23000A301A9 /* ImageLoader.swift */; };
+		3E6C838E286D6E630028B842 /* GIFFavGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E6C838D286D6E630028B842 /* GIFFavGrid.swift */; };
 		3EDD7A51286AB6B500C4F395 /* TabGIFViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7A50286AB6B500C4F395 /* TabGIFViewModel.swift */; };
 		3EDD7A55286AC20C00C4F395 /* URLImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7A54286AC20C00C4F395 /* URLImageViewModel.swift */; };
 		3EDD7A57286AC23B00C4F395 /* GIFURLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7A56286AC23B00C4F395 /* GIFURLImage.swift */; };
@@ -43,6 +44,7 @@
 		3E4E4A5E2869799400A301A9 /* GIFFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFFetcher.swift; sourceTree = "<group>"; };
 		3E4E4A60286979B900A301A9 /* GIFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFModel.swift; sourceTree = "<group>"; };
 		3E4E4A6B2869F23000A301A9 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
+		3E6C838D286D6E630028B842 /* GIFFavGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFFavGrid.swift; sourceTree = "<group>"; };
 		3EDD7A50286AB6B500C4F395 /* TabGIFViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabGIFViewModel.swift; sourceTree = "<group>"; };
 		3EDD7A54286AC20C00C4F395 /* URLImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageViewModel.swift; sourceTree = "<group>"; };
 		3EDD7A56286AC23B00C4F395 /* GIFURLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFURLImage.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				3E33644A286753130075B20F /* GIFFavView.swift */,
+				3E6C838D286D6E630028B842 /* GIFFavGrid.swift */,
 				3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */,
 				3EEE8D00286BFA96009B367F /* GridOddRow.swift */,
 			);
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E6C838E286D6E630028B842 /* GIFFavGrid.swift in Sources */,
 				3E41A7FC286605570076E4A1 /* ContentView.swift in Sources */,
 				3E33644B286753130075B20F /* GIFFavView.swift in Sources */,
 				3EEE8D01286BFA96009B367F /* GridOddRow.swift in Sources */,
