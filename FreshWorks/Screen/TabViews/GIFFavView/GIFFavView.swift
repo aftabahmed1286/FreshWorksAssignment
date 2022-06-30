@@ -27,11 +27,10 @@ struct GIFFavView: View {
                 .pickerStyle(.segmented)
                 
                 if style == 0 {
-                    GIFFavGrid()
+                    GIFFavGrid(gifImageData: viewModel.favGifImageData, rows: viewModel.numberOfRowsForFavoriteGrid())
                 } else {
                     GIFList(gifImageData: viewModel.favGifImageData)
                 }
-
             }
             .navigationBarTitleDisplayMode(.inline)
             .onAppear{

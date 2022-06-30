@@ -9,14 +9,18 @@ import SwiftUI
 
 struct GIFFavGrid: View {
     
-    @EnvironmentObject var viewModel: TabGIFViewModel
+    var gifImageData: [GIFImageData]
+    var rows: Int
+    
+    @State var shouldRefresh = false
     
     var body: some View {
+        if shouldRefresh == true || shouldRefresh == false {
         ScrollView {
             VStack(spacing: 20) {
-                ForEach(0..<viewModel.numberOfRowsForFavoriteGrid(), id: \.self) { row in
+                ForEach(0..<rows, id: \.self) { row in
                     if row % 2 == 0 {
-                        GridEvenRow(row: row)
+                        GridEvenRow(row: row, shouldRefresh: $shouldRefresh)
                     } else {
                         GridOddRow(row: row)
                     }
@@ -24,5 +28,7 @@ struct GIFFavGrid: View {
             }
         }
         .padding([.leading, .trailing], 20)
+        }
+        
     }
 }

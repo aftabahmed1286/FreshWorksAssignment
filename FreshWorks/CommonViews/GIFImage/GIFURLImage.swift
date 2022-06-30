@@ -11,7 +11,7 @@ struct GIFURLImageView: View {
     
     @EnvironmentObject var viewModel: TabGIFViewModel
     
-    @StateObject var urlImageviewModel: URLImageViewModel = URLImageViewModel(id: nil, url: nil)
+    @StateObject var urlImageviewModel: URLImageViewModel
     
     @State var isFavSelected: Bool = false
     
@@ -20,6 +20,7 @@ struct GIFURLImageView: View {
             
             if let image = urlImageviewModel.data {
                 GIFImage(image)
+                Text(urlImageviewModel.id ?? "")
                 VStack {
                     HStack {
                         Spacer()
@@ -55,7 +56,6 @@ struct GIFURLImageView: View {
         if let id = urlImageviewModel.id {
             let isFav = DefaultsHelper.isFavoriteFor(id)
             DefaultsHelper.shouldfavoriteFor(id, shouldFav: !isFav)
-            //viewModel.loadFavoriteGIFImageData()
             if DefaultsHelper.isFavoriteFor(id) != isFavSelected {
                 isFavSelected.toggle()
             }
