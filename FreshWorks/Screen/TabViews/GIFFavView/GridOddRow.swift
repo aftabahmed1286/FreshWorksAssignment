@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view displas the Odd Row in the Grid
 struct GridOddRow: View {
 
     var row: Int
@@ -33,6 +34,7 @@ struct GridOddRow: View {
         }
     }
     
+    /// This method loads columns for the row
     private func loadColumns() {
         let fav = viewModel.favGifImageData
         let index = row/2 * 5 + 3

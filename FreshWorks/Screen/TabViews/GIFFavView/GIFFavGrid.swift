@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view loads the favorites in Grid style
 struct GIFFavGrid: View {
     
     var rows: Int

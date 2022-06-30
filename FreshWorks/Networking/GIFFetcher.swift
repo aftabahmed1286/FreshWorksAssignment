@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This struct helps in fetching the image
 struct GIFFetcher {
     
     var session = URLSession.shared

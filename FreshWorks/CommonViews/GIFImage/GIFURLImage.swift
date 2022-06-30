@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view shows the downloaded/fetched from file storage
 struct GIFURLImageView: View {
     
     @EnvironmentObject var viewModel: TabGIFViewModel
@@ -20,7 +21,6 @@ struct GIFURLImageView: View {
             
             if let image = urlImageviewModel.data {
                 GIFImage(image)
-                Text(urlImageviewModel.id ?? "")
                 VStack {
                     HStack {
                         Spacer()
@@ -52,6 +52,7 @@ struct GIFURLImageView: View {
         }
     }
     
+    /// When Favorite tapped the corresponding id is stored in the userdefaults
     func favTapped() {
         if let id = urlImageviewModel.id {
             let isFav = DefaultsHelper.isFavoriteFor(id)

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This class builds the url strings for different APIs used in the app
 class URLBuilder {
     
 //    static let shared: URLBuilder = URLBuilder()
@@ -14,6 +15,9 @@ class URLBuilder {
     /*
      https://api.giphy.com/v1/gifs/search?api_key=nLonTtGp4NYxDNBnVTNGknvNRFnShBMT&q=a&limit=25&offset=0&rating=g&lang=en
      */
+    /// This method builds url string for the search API
+    /// - Parameter query: String
+    /// - Returns: String
     class func gifSearch(_ query: String) -> String {
         GAC.baseUrl
         + GIFAPIPath.search
@@ -28,6 +32,8 @@ class URLBuilder {
     /*
      https://api.giphy.com/v1/gifs/trending?api_key=nLonTtGp4NYxDNBnVTNGknvNRFnShBMT&limit=25&rating=g
      */
+    /// This method builds url string for the fetch API
+    /// - Returns: String
     class func gifFetch() -> String {
         GAC.baseUrl
         + GIFAPIPath.fetch

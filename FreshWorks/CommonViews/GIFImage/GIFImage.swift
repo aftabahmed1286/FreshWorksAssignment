@@ -8,6 +8,7 @@
 import SwiftUI
 import WebKit
 
+/// This is a UIView representable struct to embed WKWebView
 struct GIFImage: UIViewRepresentable {
     
     private var data: Data

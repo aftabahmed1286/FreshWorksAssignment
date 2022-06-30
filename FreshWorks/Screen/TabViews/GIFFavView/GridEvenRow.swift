@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view displas the Even Row in the Grid
 struct GridEvenRow: View {
 
     var row: Int
@@ -34,6 +35,7 @@ struct GridEvenRow: View {
         
     }
     
+    /// This method loads columns for the row
     private func loadColumns() {
         let fav = viewModel.favGifImageData
         let index = row/2 * 5

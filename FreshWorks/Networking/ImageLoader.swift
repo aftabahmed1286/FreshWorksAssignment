@@ -18,6 +18,7 @@ extension EnvironmentValues {
     }
 }
 
+/// This is an actor to download, persist and fetch image from the storage
 actor ImageLoader {
     
     private enum LoaderStatus {

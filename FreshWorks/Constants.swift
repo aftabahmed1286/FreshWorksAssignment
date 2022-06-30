@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// App Constants
 enum GAC {
     static let apiKey = "nLonTtGp4NYxDNBnVTNGknvNRFnShBMT"
     
@@ -19,6 +20,7 @@ enum GAC {
     static let langEn       = "lang=en"
 }
 
+/// API Path Constants
 enum GIFAPIPath {
     static let search = "search"
     static let fetch = "trending"

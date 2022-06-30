@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This class helps in downloading the image aynchronously
 class GIFImageLoader: ObservableObject {
     
     var gifImageData: GIFImageData?
@@ -18,6 +19,7 @@ class GIFImageLoader: ObservableObject {
     
     @Environment(\.imageLoader) private var imageLoader
     
+    /// This method downloads the the image data asynchronously
     func fetch() {
         Task {
             [weak self] in

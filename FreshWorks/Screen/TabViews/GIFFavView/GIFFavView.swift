@@ -7,8 +7,7 @@
 
 import SwiftUI
 
-
-
+/// This view is the 2nd Tab view showing just the favorites in 2 styles - Grid and List
 struct GIFFavView: View {
     
     @State private var style = 0

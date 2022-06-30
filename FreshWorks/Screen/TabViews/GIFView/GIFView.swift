@@ -8,6 +8,7 @@
 import UIKit
 import SwiftUI
 
+/// This view is the first Tab view which shows either fetched or searched GIF images
 struct GIFView: View {
     
     @EnvironmentObject var viewModel: TabGIFViewModel
@@ -27,6 +28,7 @@ struct GIFView: View {
         }
     }
     
+    /// This method loads images based on the search text
     func loadImages() {
         if searchText.isEmpty {
             viewModel.fetch()

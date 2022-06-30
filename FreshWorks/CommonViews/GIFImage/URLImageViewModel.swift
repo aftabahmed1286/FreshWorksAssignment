@@ -8,6 +8,7 @@
 import SwiftUI
 import UIKit
 
+/// View model for GIFURLImageView
 class URLImageViewModel: ObservableObject {
     
     var url: URL?
@@ -23,6 +24,8 @@ class URLImageViewModel: ObservableObject {
     @Published var data: Data? = nil
     @State private var err: Error? = nil
     
+    
+    /// This method fetches the image data asynchronously
     func fetch() {
         Task {
             [weak self] in

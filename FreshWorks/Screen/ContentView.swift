@@ -7,8 +7,8 @@
 
 import SwiftUI
 
+/// Starting Point where the app is in a Tab Bar
 struct ContentView: View {
-    
     
     init() {
        UITabBar.appearance().backgroundColor = UIColor.white

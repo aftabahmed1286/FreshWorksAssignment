@@ -7,11 +7,13 @@
 
 import SwiftUI
 
+/// This class is the sole view model for the 2 Tabs
 class TabGIFViewModel: ObservableObject {
     
     @Published var gifImageData: [GIFImageData] = []
     @Published var favGifImageData: [GIFImageData] = []
     
+    /// This method fetches the gif image data from filesystem. If it doesnt exist there, then from network. It also stores the value in the filesystem if it fetches it from the network.
     func fetch() {
         Task { [weak self] in
             guard let self = self else {return}
@@ -26,6 +28,8 @@ class TabGIFViewModel: ObservableObject {
         }
     }
     
+    /// This method fetches the gif image data for the input tsearch text, from filesystem. If it doesnt exist there, then from network. It also stores the value in the filesystem if it fetches it from the network.
+    /// - Parameter txt: String
     func search(_ txt: String) {
         Task { [weak self] in
             guard let self = self else {return}
@@ -43,6 +47,8 @@ class TabGIFViewModel: ObservableObject {
 
 extension TabGIFViewModel {
     
+    /// This is a helper method to load GIF Image Data into the published variables
+    /// - Parameter gImageData: [GIFImageData]
     private func loadGIFImageData(_ gImageData: [GIFImageData]) {
         DispatchQueue.main.async {
             self.gifImageData = gImageData
@@ -50,6 +56,7 @@ extension TabGIFViewModel {
         }
     }
     
+    /// This is a helper method to load the favorites after checking against the user defaults.
     func loadFavoriteGIFImageData() {
         favGifImageData = gifImageData.compactMap{
             DefaultsHelper.isFavoriteFor($0.id ?? "") ? $0 : nil
@@ -59,6 +66,8 @@ extension TabGIFViewModel {
 
 extension TabGIFViewModel {
     
+    /// This method calculates the number of rows required for the grid layout based on 3,2,3.. rows pattern
+    /// - Returns: Int
     func numberOfRowsForFavoriteGrid() -> Int {
         let total = favGifImageData.count
         
@@ -77,6 +86,11 @@ extension TabGIFViewModel {
         return num
     }
     
+    /// This method calculates the grid item width based on the column and row inputs
+    /// - Parameters:
+    ///   - col: Int
+    ///   - row: Int
+    /// - Returns: CGFloat
     func itemWidthForCol(_ col: Int, row: Int) -> CGFloat {
         let screenWidth = UIScreen.main.bounds.width
         

@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// This struct helps in fetching th image for the corresponding search text
 struct GIFSearch {
     
     var session = URLSession.shared

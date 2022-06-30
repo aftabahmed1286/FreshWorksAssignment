@@ -8,6 +8,7 @@
 import Foundation
 import SwiftUI
 
+/// This is the model to store the data when downloaded from the server
 struct GIFModel: Codable {
     //Data Related
     struct FixedHeight: Codable {
@@ -42,6 +43,7 @@ struct GIFModel: Codable {
     var meta: GIFMeta?
 }
 
+/// This is the model used in the app throughout
 struct GIFImageData: Hashable, Codable {
     let id: String?
     let url: URL?

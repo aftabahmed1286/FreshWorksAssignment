@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+/// This view shows the gifs in list format
 struct GIFList: View {
     
     var gifImageData: [GIFImageData]
