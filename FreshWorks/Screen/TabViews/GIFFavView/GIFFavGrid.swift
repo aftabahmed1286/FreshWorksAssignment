@@ -9,7 +9,6 @@ import SwiftUI
 
 struct GIFFavGrid: View {
     
-    var gifImageData: [GIFImageData]
     var rows: Int
     
     var body: some View {

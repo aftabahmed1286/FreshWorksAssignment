@@ -27,7 +27,7 @@ struct GIFFavView: View {
                 .pickerStyle(.segmented)
                 
                 if style == 0 {
-                    GIFFavGrid(gifImageData: viewModel.favGifImageData, rows: viewModel.numberOfRowsForFavoriteGrid())
+                    GIFFavGrid(rows: viewModel.numberOfRowsForFavoriteGrid())
                 } else {
                     GIFList(gifImageData: viewModel.favGifImageData)
                 }
