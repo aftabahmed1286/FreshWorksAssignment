@@ -10,7 +10,7 @@ import SwiftUI
 
 struct GIFView: View {
     
-    @EnvironmentObject var viewModel: GIFViewModel
+    @EnvironmentObject var viewModel: TabGIFViewModel
     
     @State private var searchText = ""
     

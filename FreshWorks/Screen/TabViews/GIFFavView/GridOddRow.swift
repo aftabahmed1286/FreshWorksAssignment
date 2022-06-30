@@ -13,7 +13,7 @@ struct GridOddRow: View {
     
     var columnsOdd = 2
 
-    @EnvironmentObject var viewModel: GIFViewModel
+    @EnvironmentObject var viewModel: TabGIFViewModel
 
     var body: some View {
         HStack(spacing: 20) {

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GIFURLImageView: View {
     
-    @EnvironmentObject var viewModel: GIFViewModel
+    @EnvironmentObject var viewModel: TabGIFViewModel
     
     @StateObject var urlImageviewModel: URLImageViewModel = URLImageViewModel(id: nil, url: nil)
     

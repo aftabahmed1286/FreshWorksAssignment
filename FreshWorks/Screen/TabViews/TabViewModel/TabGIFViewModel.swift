@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class GIFViewModel: ObservableObject {
+class TabGIFViewModel: ObservableObject {
     
     @Published var gifImageData: [GIFImageData] = []
     @Published var favGifImageData: [GIFImageData] = []
@@ -18,10 +18,7 @@ class GIFViewModel: ObservableObject {
             let fetcher = GIFFetcher()
             do {
                 let gImageData = try await fetcher.fetchGIF() ?? []
-                DispatchQueue.main.async {
-                    self.gifImageData = gImageData
-                    self.loadFavoriteGIFImageData()
-                }
+                self.loadGIFImageData(gImageData)
             } catch {
                 gifImageData = []
                 print("Error", error)
@@ -35,14 +32,21 @@ class GIFViewModel: ObservableObject {
             let search = GIFSearch()
             do {
                 let gImageData = try await search.searchGIF(txt) ?? []
-                DispatchQueue.main.async {
-                    self.gifImageData = gImageData
-                    self.loadFavoriteGIFImageData()
-                }
+                self.loadGIFImageData(gImageData)
             } catch {
                 gifImageData = []
                 print("Error", error)
             }
+        }
+    }
+}
+
+extension TabGIFViewModel {
+    
+    private func loadGIFImageData(_ gImageData: [GIFImageData]) {
+        DispatchQueue.main.async {
+            self.gifImageData = gImageData
+            self.loadFavoriteGIFImageData()
         }
     }
     
@@ -51,6 +55,9 @@ class GIFViewModel: ObservableObject {
             DefaultsHelper.isFavoriteFor($0.id ?? "") ? $0 : nil
         }
     }
+}
+
+extension TabGIFViewModel {
     
     func numberOfRowsForFavoriteGrid() -> Int {
         let total = favGifImageData.count

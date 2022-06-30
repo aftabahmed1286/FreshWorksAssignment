@@ -9,7 +9,7 @@ import SwiftUI
 
 struct GIFFavGrid: View {
     
-    @EnvironmentObject var viewModel: GIFViewModel
+    @EnvironmentObject var viewModel: TabGIFViewModel
     
     var body: some View {
         ScrollView {
@@ -31,7 +31,7 @@ struct GIFFavView: View {
     
     @State private var style = 0
     
-    @EnvironmentObject var viewModel: GIFViewModel
+    @EnvironmentObject var viewModel: TabGIFViewModel
     
     var body: some View {
         NavigationView {

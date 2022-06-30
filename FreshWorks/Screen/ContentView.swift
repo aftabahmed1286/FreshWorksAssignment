@@ -14,7 +14,7 @@ struct ContentView: View {
        UITabBar.appearance().backgroundColor = UIColor.white
     }
     
-    @StateObject var viewModel = GIFViewModel()
+    @StateObject var viewModel = TabGIFViewModel()
     
     var body: some View {
         TabView {

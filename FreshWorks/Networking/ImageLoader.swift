@@ -34,6 +34,7 @@ actor ImageLoader {
 
     public func fetch(_ urlRequest: URLRequest, _ id: String) async throws -> Data {
         // fetch image by URLRequest
+        print("Fetch for id - \(id)")
         if let status = images[id] {
             switch status {
             case .fetched(let data):
