@@ -1,4 +1,4 @@
-# FreshWorksAssignment
+# SwiftUI Assignment
 iOS Assignment
 
 Language - SwiftUI
