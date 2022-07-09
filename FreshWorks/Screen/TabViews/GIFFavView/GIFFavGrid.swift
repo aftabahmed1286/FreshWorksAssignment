@@ -10,19 +10,25 @@ import SwiftUI
 /// This view loads the favorites in Grid style
 struct GIFFavGrid: View {
     
-    var rows: Int
+    var gifImageData: [GIFImageData]
+    
+    let columns = [
+           GridItem(.flexible()),
+           GridItem(.flexible()),
+           GridItem(.flexible())
+       ]
     
     var body: some View {
         ScrollView {
-            VStack(spacing: 20) {
-                ForEach(0..<rows, id: \.self) { row in
-                    if row % 2 == 0 {
-                        GridEvenRow(row: row)
-                    } else {
-                        GridOddRow(row: row)
-                    }
+            LazyVGrid(columns: columns, spacing: 20) {
+                ForEach(gifImageData, id: \.self) { gid in
+                    let urlImageviewModel = URLImageViewModel(id: gid.id, url: gid.url)
+                    GIFURLImageView(urlImageviewModel: urlImageviewModel)
+                        .frame(height: 150)
                 }
             }
-        }.padding([.leading, .trailing], 20)
+            .padding(.horizontal)
+        }
+        
     }
 }

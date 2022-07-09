@@ -47,4 +47,18 @@ struct GIFModel: Codable {
 struct GIFImageData: Hashable, Codable {
     let id: String?
     let url: URL?
+    
+    func isFav() -> Bool {
+        var retVal = false
+        if let id = id {
+            retVal = DefaultsHelper.isFavoriteFor(id)
+        }
+        return retVal
+    }
+    
+    func fav(_ shouldFav: Bool) {
+        if let id = id {
+            DefaultsHelper.shouldfavoriteFor(id, shouldFav: shouldFav)
+        }
+    }
 }

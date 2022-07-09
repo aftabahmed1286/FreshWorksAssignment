@@ -18,8 +18,8 @@ struct GIFURLImageView: View {
     
     var body: some View {
         ZStack {
-            
-            if let image = urlImageviewModel.data {
+            if let image = urlImageviewModel.data
+                {
                 GIFImage(image)
                 VStack {
                     HStack {

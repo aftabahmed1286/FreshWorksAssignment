@@ -23,10 +23,8 @@
 		3EDD7A55286AC20C00C4F395 /* URLImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7A54286AC20C00C4F395 /* URLImageViewModel.swift */; };
 		3EDD7A57286AC23B00C4F395 /* GIFURLImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EDD7A56286AC23B00C4F395 /* GIFURLImage.swift */; };
 		3EEE8CFE286BFA01009B367F /* GIFList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8CFD286BFA01009B367F /* GIFList.swift */; };
-		3EEE8D01286BFA96009B367F /* GridOddRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D00286BFA96009B367F /* GridOddRow.swift */; };
 		3EEE8D03286C0509009B367F /* DefaultsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D02286C0509009B367F /* DefaultsHelper.swift */; };
 		3EEE8D06286C0560009B367F /* GIFSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D05286C0560009B367F /* GIFSearch.swift */; };
-		3EEE8D0A286C4CBC009B367F /* GridEvenRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */; };
 		3EEE8D26286C937F009B367F /* GIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D25286C937F009B367F /* GIFImage.swift */; };
 		3EEE8D28286C93C0009B367F /* GIFImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EEE8D27286C93C0009B367F /* GIFImageLoader.swift */; };
 /* End PBXBuildFile section */
@@ -49,10 +47,8 @@
 		3EDD7A54286AC20C00C4F395 /* URLImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLImageViewModel.swift; sourceTree = "<group>"; };
 		3EDD7A56286AC23B00C4F395 /* GIFURLImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFURLImage.swift; sourceTree = "<group>"; };
 		3EEE8CFD286BFA01009B367F /* GIFList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFList.swift; sourceTree = "<group>"; };
-		3EEE8D00286BFA96009B367F /* GridOddRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridOddRow.swift; sourceTree = "<group>"; };
 		3EEE8D02286C0509009B367F /* DefaultsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultsHelper.swift; sourceTree = "<group>"; };
 		3EEE8D05286C0560009B367F /* GIFSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFSearch.swift; sourceTree = "<group>"; };
-		3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridEvenRow.swift; sourceTree = "<group>"; };
 		3EEE8D25286C937F009B367F /* GIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImage.swift; sourceTree = "<group>"; };
 		3EEE8D27286C93C0009B367F /* GIFImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFImageLoader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -158,8 +154,6 @@
 			children = (
 				3E33644A286753130075B20F /* GIFFavView.swift */,
 				3E6C838D286D6E630028B842 /* GIFFavGrid.swift */,
-				3EEE8D09286C4CBC009B367F /* GridEvenRow.swift */,
-				3EEE8D00286BFA96009B367F /* GridOddRow.swift */,
 			);
 			path = GIFFavView;
 			sourceTree = "<group>";
@@ -282,14 +276,12 @@
 				3E6C838E286D6E630028B842 /* GIFFavGrid.swift in Sources */,
 				3E41A7FC286605570076E4A1 /* ContentView.swift in Sources */,
 				3E33644B286753130075B20F /* GIFFavView.swift in Sources */,
-				3EEE8D01286BFA96009B367F /* GridOddRow.swift in Sources */,
 				3EEE8D28286C93C0009B367F /* GIFImageLoader.swift in Sources */,
 				3E4E4A6C2869F23000A301A9 /* ImageLoader.swift in Sources */,
 				3E4E4A5F2869799400A301A9 /* GIFFetcher.swift in Sources */,
 				3EEE8D03286C0509009B367F /* DefaultsHelper.swift in Sources */,
 				3EEE8D06286C0560009B367F /* GIFSearch.swift in Sources */,
 				3EDD7A55286AC20C00C4F395 /* URLImageViewModel.swift in Sources */,
-				3EEE8D0A286C4CBC009B367F /* GridEvenRow.swift in Sources */,
 				3EDD7A57286AC23B00C4F395 /* GIFURLImage.swift in Sources */,
 				3EEE8CFE286BFA01009B367F /* GIFList.swift in Sources */,
 				3E336449286752F40075B20F /* GIFView.swift in Sources */,
